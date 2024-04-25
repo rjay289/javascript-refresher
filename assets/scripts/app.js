@@ -21,14 +21,26 @@
 // import { date as DATE } from "./utils.js";
 // console.log(DATE);
 
-//example to show in a function argument you can set a default value too
-function greetUser(userName, message = "wassup") {
-  console.log(userName);
-  console.log(message);
-}
+// //example to show in a function argument you can set a default value too
+// function greetUser(userName, message = "wassup") {
+//   console.log(userName);
+//   console.log(message);
+// }
 
-greetUser("radia");
-//you can overwrite the default
-greetUser("mate", "yoo");
+// greetUser("radia");
+// //you can overwrite the default
+// greetUser("mate", "yoo");
 
-//Note: due to some issues in package.json file i have removed the '--open' from scripts->start
+// //Note: due to some issues in package.json file i have removed the '--open' from scripts->start
+
+//because it was exported as default we just set a name for the anonymous function here
+import arrowFunction from "./utils.js";
+console.log(arrowFunction("radia", ", newbie here lol"));
+
+//import for Method 1:
+import { test } from "./utils.js";
+console.log(test("yoo"));
+
+//import for Method 2:
+import { test2 } from "./utils.js";
+console.log(test2("yoo"));
