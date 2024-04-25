@@ -20,3 +20,15 @@
 // //'as' can be used for aliases
 // import { date as DATE } from "./utils.js";
 // console.log(DATE);
+
+//example to show in a function argument you can set a default value too
+function greetUser(userName, message = "wassup") {
+  console.log(userName);
+  console.log(message);
+}
+
+greetUser("radia");
+//you can overwrite the default
+greetUser("mate", "yoo");
+
+//Note: due to some issues in package.json file i have removed the '--open' from scripts->start
