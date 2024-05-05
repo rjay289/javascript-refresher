@@ -101,10 +101,29 @@
 // //output looks like this: [Object, Object, Object, Object, Object]
 // //each object will have key 'text'
 
-const [firstName, lastname] = ["Radia", "Jannat"];
-console.log(firstName);
-console.log(lastname);
+// const [firstName, lastname] = ["Radia", "Jannat"];
+// console.log(firstName);
+// console.log(lastname);
 
-const { halfName, otherHalf } = { halfName: "Ra", otherHalf: "Ja" };
-console.log(halfName);
-console.log(otherHalf);
+// const { halfName, otherHalf } = { halfName: "Ra", otherHalf: "Ja" };
+// console.log(halfName);
+// console.log(otherHalf);
+
+const array = ["R", "A", "D"];
+const addToArray = ["I", "A"];
+
+//this is called spread operator
+//what this does is extract elements from ecah array and make a new 1D array
+const mergedArrays = [...array, ...addToArray];
+console.log(mergedArrays);
+
+const obj = {
+  name: "lula",
+  age: 420,
+};
+//you can add the ...obj anywhere
+const addToObj = {
+  ...obj,
+  height: "4foot11",
+};
+console.log(addToObj);
