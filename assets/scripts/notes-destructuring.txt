@@ -1,0 +1,16 @@
+Notes on 'Destructuring in function parameter'
+
+You call a function this way:
+storeOrder({id: 5, currency: 'USD', amount: 15.99}); 
+
+You can write the function this way:
+function storeOrder(order) {
+  localStorage.setItem('id', order.id);
+  localStorage.setItem('currency', order.currency);
+}
+
+But instead you destructure it in the argument so that you don't have to use dot notation:
+function storeOrder({id, currency}) { // destructuring
+  localStorage.setItem('id', id);
+  localStorage.setItem('currency', currency);
+}
