@@ -109,21 +109,36 @@
 // console.log(halfName);
 // console.log(otherHalf);
 
-const array = ["R", "A", "D"];
-const addToArray = ["I", "A"];
+// const array = ["R", "A", "D"];
+// const addToArray = ["I", "A"];
 
-//this is called spread operator
-//what this does is extract elements from ecah array and make a new 1D array
-const mergedArrays = [...array, ...addToArray];
-console.log(mergedArrays);
+// //this is called spread operator
+// //what this does is extract elements from ecah array and make a new 1D array
+// const mergedArrays = [...array, ...addToArray];
+// console.log(mergedArrays);
 
-const obj = {
-  name: "lula",
-  age: 420,
-};
-//you can add the ...obj anywhere
-const addToObj = {
-  ...obj,
-  height: "4foot11",
-};
-console.log(addToObj);
+// const obj = {
+//   name: "lula",
+//   age: 420,
+// };
+// //you can add the ...obj anywhere
+// const addToObj = {
+//   ...obj,
+//   height: "4foot11",
+// };
+// console.log(addToObj);
+
+const password = prompt("Enter password:");
+
+if (password === "bruh") {
+  console.log("'bruh' works :)");
+} else if (password === "stfu") {
+  console.log("'stfu' works B)");
+} else {
+  console.log("f off");
+}
+
+const arrays = ["R", "A", "D"];
+for (const array of arrays) {
+  console.log(array);
+}
