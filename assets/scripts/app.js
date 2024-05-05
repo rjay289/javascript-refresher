@@ -45,32 +45,58 @@
 // import { test2 } from "./utils.js";
 // console.log(test2("yoo"));
 
-//2 ways of making objects:
-//Method 1:
-const user = {
-  name: "radia",
-  age: 22,
-  //objects can contain functions:
-  greet() {
-    console.log("Hi!");
-  },
-};
+// //2 ways of making objects:
+// //Method 1:
+// const user = {
+//   name: "radia",
+//   age: 22,
+//   //objects can contain functions:
+//   greet() {
+//     console.log("Hi!");
+//   },
+// };
 
-user.greet();
-console.log("I am " + user.name + ". I am " + user.age + " years old.");
+// user.greet();
+// console.log("I am " + user.name + ". I am " + user.age + " years old.");
 
-//Method 2:
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// //Method 2:
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  greet() {
-    console.log("Helo!");
-  }
-}
+//   greet() {
+//     console.log("Helo!");
+//   }
+// }
 
-const userNew = new User("rad", "1");
-console.log(userNew);
-userNew.greet();
+// const userNew = new User("rad", "1");
+// console.log(userNew);
+// userNew.greet();
+
+const myName = ["R", "A", "D"];
+console.log(myName[2]); //will return value at that place in array
+
+myName.push("I");
+myName.push("A");
+console.log(myName); //will return array
+//findIndex can take in arrow function with at least 1 argument
+const index = myName.findIndex((item) => {
+  return item === "R";
+});
+console.log(index); //will return actual index
+
+//shortened the arrow function
+const indexNew = myName.findIndex((item) => item === "Z");
+console.log(indexNew); //will return error value
+
+const myNameEdited = myName.map((item) => item + "!");
+console.log(myNameEdited); //will return all array elements plus a "!" with each
+//output looks like this: ['R!', 'A!', 'D!', 'I!', 'A!']
+
+//in arrow function enclosing {} in parantheses tells we are returning an object
+const myNameEditedAgain = myName.map((item) => ({ text: item + "?" }));
+console.log(myNameEditedAgain); //will return array of objects
+//output looks like this: [Object, Object, Object, Object, Object]
+//each object will have key 'text'
